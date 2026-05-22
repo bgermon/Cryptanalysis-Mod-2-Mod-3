@@ -496,7 +496,7 @@ def splitting_attack_s(n,alpha,beta, Nlimit):
 
 def main():
     # ---- Parameters to play with -----------------------------------------
-    n    = 768         # key / input length
+    n    = 514         # key / input length
     #s    = 0          # split size for Section 4.3 (~0.09 n is near-optimal)
     alpha = 0.5
     beta = 0.5
