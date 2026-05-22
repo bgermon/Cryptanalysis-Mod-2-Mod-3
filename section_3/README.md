@@ -13,11 +13,12 @@ g++ -O3 -fopenmp comp_asymp_epsilon.cpp -o comp_asymp_epsilon
 python3 comp_asymp_epsilon.py
 ```
 
-**Display the exact bias over all possible w for a fixed n and beta**
+**Compute the attack complexities of the aggregated attacks with and without the splitting strategy**
 
 ```bash
-python3 johansson_var_alpha.py <n> <beta n>
+python3 find_attack_complexity_with_and_without_splitting.py
 ```
+
 
 ## Server scripts
 
