@@ -46,7 +46,7 @@ def demonstrate_convergence(n=10000, alpha=0.5, beta=0.5, k0=0, num_samples=5000
     
     # Plot empirical histogram
     bins = np.arange(min(Z) - 0.5, max(Z) + 1.5, 1)
-    plt.hist(Z, bins=bins, density=True, alpha=0.6, color='blue', edgecolor='black', label='Empirical (S + V) | U (Histogram)')
+    plt.hist(Z, bins=bins, density=True, alpha=0.6, color='blue', edgecolor='black', label='Empirical (S + V) | U ')
 
     # Plot theoretical Normal PDF
     x_axis = np.linspace(min(Z), max(Z), 1000)
@@ -54,9 +54,9 @@ def demonstrate_convergence(n=10000, alpha=0.5, beta=0.5, k0=0, num_samples=5000
     plt.plot(x_axis, normal_pdf, 'k--', lw=2.5, label=f'Theoretical $\\mathcal{{N}}(\\mu, \\sigma^2)$')
 
     # Formatting
-    plt.title(f'Convergence of (S + V) | U to Normal Distribution (n={n})', fontsize=14, pad=15)
+    plt.title(f'Approximation of (S + V) | U by Normal distribution (n={n})', fontsize=14, pad=15)
     plt.xlabel('Value of (S + V) | U', fontsize=12)
-    plt.ylabel('Probability Density', fontsize=12)
+    plt.ylabel('Probability', fontsize=12)
     plt.legend(fontsize=11)
     plt.grid(axis='y', alpha=0.3)
     
