@@ -27,11 +27,11 @@ mp_int nCr(int n, int k) {
 }
 
 // Hypergeometric Probability P(X = k) returning a 100-digit precision float
-mp_float nCr_prob(int pop, int drabs, int succ, int k) {
-    if (k < 0 || k > succ || k > drabs || drabs - k > pop - succ) return mp_float(0);
+mp_float nCr_prob(int pop, int draws, int succ, int k) {
+    if (k < 0 || k > succ || k > draws || draws - k > pop - succ) return mp_float(0);
     
-    mp_int num = nCr(succ, k) * nCr(pop - succ, drabs - k);
-    mp_int den = nCr(pop, drabs);
+    mp_int num = nCr(succ, k) * nCr(pop - succ, draws - k);
+    mp_int den = nCr(pop, draws);
     
     return mp_float(num) / mp_float(den);
 }
